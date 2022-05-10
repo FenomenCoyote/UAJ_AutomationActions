@@ -1,0 +1,99 @@
+Revisión realizada del contenido existente hasta el 17 de Marzo. Commit 31fc645 : "Añadido Prefab Mapa1"
+
+/*\ Esta revisión representa una lista de cosas pendientes por hacer (items) referentes a la programación existente hasta la fecha. 
+    La idea es ir borrando los items cuando se hayan hecho hasta dejar el script "vacío" antes de empezar la fase de diseño/testing.
+    ** este símbolo representa que el *.cs en cuestión tiene más de un item pendiente. 
+
+/*\ if(Limpiar código) *.cs = tiene espacios innecesarios y/o comentarios que necesitan ser borrados y/o código movido.
+			       	  Mantener estructura limpia, iguales para todos los scripts y lo más legible posible.
+
+/*\ Necesario establecer un "orden" a los comentarios no-summarys, llegar a un acuerdo sobre su estructura y reordenarlos.
+
+/*\ Opcional, someter a votación: Crear un componente para gestionar los cambios en todos los controles de las mecánicas de los jugadores.
+			      	  Además se podrá usar este componente para gestionar los cambios desde el menú y hacer controles configurables,
+				  facilitaría la labor de QA y aportaría una visión global y sencilla de todos los enlaces de las mecánicas.
+
+			      	  Crear otro similar para los datos "configurables" (atributos) referentes a poderes y power ups. 
+			      	  Esto facilitaría inmensamente la labor de QA y la gestión de todos los parámetros de forma simple y rápida.
+
+
+---------------------------------MANAGERS JUEGO-----------------------------
+																															   \
+///GameManager.cs///		-> Its ok.																			
+																															   /
+///UI.cs///			-> ** Its ok.											
+
+---------------------------------ENEMIGOS-----------------------------------
+
+///AtaquePanzudo.cs///  	-> Its ok.
+
+///GoombaStun.cs///		-> Its ok.
+
+///MovimientoCollider.cs///	-> Its ok.
+
+///MovimientoEnemigos.cs///	-> Its ok.
+
+///Rebote.cs///			-> Its ok.
+
+///SeguirObjetivo.cs///		-> Its ok.
+
+///VisionVigilante.cs///	-> Its ok.		
+
+----------------------------------MAPA-----------------------------------
+
+
+///Guillotina.cs///		-> Its ok.		
+
+///Llegada.cs///		-> Its ok.
+
+///Pared.cs///			-> Its ok.
+
+///Paredes.cs///		-> Its ok.
+
+				   Dato: Estudiar y llegar a un consenso sobre los nombres Pared.cs, Paredes.cs, Muro de enums, etc. se crea confusión.
+  
+///Tuberia.cs///		-> Its ok.
+	
+
+---------------------------------JUGADOR------------------------------------
+
++++Mejoras+++
+
+ 	 ///MejoraFantasma.cs///	-> Its ok.
+	 ///MejoraPico.cs///		-> Its ok.
+	 ///MejoraVelocidad.cs///	-> Its ok.
+
++++Poderes+++
+
+ 	///CogerGemas.cs///		-> Its ok.
+
+ 	///CubitoHielo.cs///		-> Its ok.
+
+  	///Neblina.cs///		-> Its ok.
+
+ 	///PoderesManager.cs///		->  It's ok
+
++++Respawn+++
+
+  	///CambiarSpawn.cs///		-> Todavía no actualiza bien la posición por alguna razón, revisar.
+
+  	///Respawn.cs///		-> Limpiar código.
+
+  	///ZonaMuerte.cs///		-> It's ok.	
+
+
+///BanderaRodar.cs///		-> Its ok.		
+
+///Camara.cs///			-> Its ok.
+
+///CheckSalto.cs///		-> Its ok.		
+
+///ControladorJugador.cs///	-> Its ok.
+
+///EstadoFantasma.cs///		-> Its ok. 
+
+///PerdidasControl.cs///	-> Its ok.
+
+///RomperParedes.cs///		-> Its ok.
+
+///SaltoParedes.cs///		-> Its ok. Mejora opcional: Implementar un segundo cálculo de físicas específico para SaltoParedes en vez de usar AddForce.

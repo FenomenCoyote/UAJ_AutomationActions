@@ -1,0 +1,283 @@
+fileFormatVersion: 2
+guid: db9226388e54e1d4bb8a59acdf87fd6f
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: cable1_0
+    21300002: cable1_1
+    21300004: cable1_2
+    21300006: cable1_3
+    21300008: cable1_4
+    21300010: cable1_5
+    21300012: cable1_6
+    21300014: cable1_7
+    21300016: cable1_8
+    21300018: cable1_9
+    21300020: cable1_10
+    21300022: cable1_11
+    21300024: cable1_12
+    21300026: cable1_13
+    21300028: cable1_14
+    21300030: cable1_15
+    21300032: cable1_16
+    21300034: cable1_17
+    21300036: cable1_18
+    21300038: cable1_19
+    21300040: cable1_20
+    21300042: cable1_21
+    21300044: cable1_22
+    21300046: cable1_23
+    21300048: cable1_24
+    21300050: cable1_25
+    21300052: cable1_26
+    21300054: cable1_27
+    21300056: cable1_28
+    21300058: cable1_29
+    21300060: cable1_30
+    21300062: cable1_31
+    21300064: cable1_32
+    21300066: cable1_33
+    21300068: cable1_34
+    21300070: cable1_35
+    21300072: cable1_36
+    21300074: cable1_37
+    21300076: cable1_38
+    21300078: cable1_39
+    21300080: cable1_40
+    21300082: cable1_41
+    21300084: cable1_42
+    21300086: cable1_43
+    21300088: cable1_44
+    21300090: cable1_45
+    21300092: cable1_46
+    21300094: cable1_47
+    21300096: cable1_48
+    21300098: cable1_49
+    21300100: cable1_50
+    21300102: cable1_51
+    21300104: cable1_52
+    21300106: cable1_53
+    21300108: cable1_54
+    21300110: cable1_55
+    21300112: cable1_56
+    21300114: cable1_57
+    21300116: cable1_58
+    21300118: cable1_59
+    21300120: cable1_60
+    21300122: cable1_61
+    21300124: cable1_62
+    21300126: cable1_63
+    21300128: cable1_64
+    21300130: cable1_65
+    21300132: cable1_66
+    21300134: cable1_67
+    21300136: cable1_68
+    21300138: cable1_69
+    21300140: cable1_70
+    21300142: cable1_71
+    21300144: cable1_72
+    21300146: cable1_73
+    21300148: cable1_74
+    21300150: cable1_75
+    21300152: cable1_76
+    21300154: cable1_77
+    21300156: cable1_78
+    21300158: cable1_79
+    21300160: cable1_80
+    21300162: cable1_81
+    21300164: cable1_82
+    21300166: cable1_83
+    21300168: cable1_84
+    21300170: cable1_85
+    21300172: cable1_86
+    21300174: cable1_87
+    21300176: cable1_88
+    21300178: cable1_89
+    21300180: cable1_90
+    21300182: cable1_91
+    21300184: cable1_92
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: cable1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 756
+        width: 1024
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 652a77e585b56e84ca0c16cced48f8fc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cable1_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 336
+        width: 512
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec3524e766c981447b68cf10143b37e7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cable1_2
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 364
+        width: 496
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17ac8825baff32147a6308f6f7e293a2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cable1_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 142
+        width: 437
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88ff1e74e9806e14287380d2d49b8c67
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 1a02c4967a9e32c4383e5bd3ebccd6a8
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

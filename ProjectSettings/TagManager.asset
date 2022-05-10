@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - jugador1
+  - jugador2
+  - mundo1
+  - mundo2
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - pared
+  - colliderPared
+  - suelo
+  - colliderSalto
+  - colliderVision
+  - jugador
+  - powerUp
+  - Muro
+  - Neblina
+  - PlataformaMov
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Fondo
+    uniqueID: 2744228245
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Suelo
+    uniqueID: 1846326325
+    locked: 0
+  - name: Feedback
+    uniqueID: 3352857117
+    locked: 0
+  - name: Enemigos
+    uniqueID: 3608984857
+    locked: 0
