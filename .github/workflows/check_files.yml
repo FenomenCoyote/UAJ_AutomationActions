@@ -18,6 +18,9 @@ jobs:
     name: Run check sounds location bash script
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
       - name: Check sounds location
         run: |
          chmod +x ./.github/scripts/checkSoundsLocation.sh
@@ -28,6 +31,9 @@ jobs:
     name: Run check data files location bash script
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
       - name: Check data files location
         run: |
          chmod +x ./.github/scripts/checkDataLocation.sh
@@ -38,6 +44,9 @@ jobs:
     name: Run check filenames duplicated bash script
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
       - name: Check repeated file names
         run: |
          chmod +x ./.github/scripts/checkFilenameDuplicated.sh
