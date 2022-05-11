@@ -16,6 +16,6 @@ jobs:
 
       - name: Check sounds location
         run: |
-         chmod +x ./.github/scripts/checkSoundsLocations.sh
+         chmod +x ./.github/scripts/checkSoundsLocation.sh
          ./.github/scripts/checkSoundsLocation.sh
         shell: bash
