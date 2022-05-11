@@ -1,34 +1,50 @@
 name: Check Files
 on: push
 jobs:
-  File_Checks:
-    name: Run check files bash scripts
+  Check_image_files:
+    name: Run check images location bash script
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
+        
       - name: Check images location
         run: |
          chmod +x ./.github/scripts/checkImagesLocation.sh
          ./.github/scripts/checkImagesLocation.sh
         shell: bash
 
+  Check_sound_files:
+    name: Run check sounds location bash script
+    runs-on: ubuntu-latest
+    steps:
       - name: Check sounds location
         run: |
          chmod +x ./.github/scripts/checkSoundsLocation.sh
          ./.github/scripts/checkSoundsLocation.sh
         shell: bash
 
+  Check_data_files:
+    name: Run check data files location bash script
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check data files location
+        run: |
+         chmod +x ./.github/scripts/checkDataLocation.sh
+         ./.github/scripts/checkDataLocation.sh
+        shell: bash
+
+  Check_repeated_filenames:
+    name: Run check filenames duplicated bash script
+    runs-on: ubuntu-latest
+    steps:
       - name: Check repeated file names
         run: |
          chmod +x ./.github/scripts/checkFilenameDuplicated.sh
          ./.github/scripts/checkFilenameDuplicated.sh
         shell: bash
 
-      - name: Check data files location
-        run: |
-         chmod +x ./.github/scripts/checkDataLocation.sh
-         ./.github/scripts/checkDataLocation.sh
-        shell: bash
+      
+
+      
 
