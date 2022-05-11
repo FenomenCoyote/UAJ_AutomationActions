@@ -22,7 +22,7 @@ jobs:
 
       - name: Check repeated file names
         run: |
-         chmod +x ./.github/scripts/checkFilenameRepeated.sh
-         ./.github/scripts/checkFilenameRepeated.sh
+         chmod +x ./.github/scripts/checkFilenameDuplicated.sh
+         ./.github/scripts/checkFilenameDuplicated.sh
         shell: bash
 
