@@ -62,7 +62,7 @@ jobs:
 
       - name: Check source files location
         run:
-         chmod +x ./github/scripts/chSourceLocation.sh
+         chmod +x ./.github/scripts/chSourceLocation.sh
         shell: bash
 
       
