@@ -19,3 +19,10 @@ jobs:
          chmod +x ./.github/scripts/checkSoundsLocation.sh
          ./.github/scripts/checkSoundsLocation.sh
         shell: bash
+
+      - name: Check repeated file names
+        run: |
+         chmod +x ./.github/scripts/checkFilenameRepeated.sh
+         ./.github/scripts/checkFilenameRepeated.sh
+        shell: bash
+
