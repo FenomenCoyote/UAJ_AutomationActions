@@ -1,21 +1,15 @@
 name: Check Files
 on: push
 jobs:
-  activation:
+  File Checks:
     name: Run check files bash scripts
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Simple echo
-        run: |
-         chmod +x ./.github/scripts/testbash.sh
-         ./.github/scripts/testbash.sh
-        shell: bash
-
       - name: Check images location
       run: |
-        chmod +x ./.github/scripts/check_images_location.sh
-        ./.github/scripts/check_images_location.sh
+        chmod +x ./.github/scripts/checkImgInImages.sh
+        ./.github/scripts/checkImgInImages.sh
       shell: bash
