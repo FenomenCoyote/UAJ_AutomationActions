@@ -8,7 +8,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
         
-      - name: Check images location
+      - name: Check images files location
         run: |
          chmod +x ./.github/scripts/chImageLocation.sh
          ./.github/scripts/chImageLocation.sh
@@ -21,7 +21,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Check sounds location
+      - name: Check sounds files location
         run: |
          chmod +x ./.github/scripts/chSoundLocation.sh
          ./.github/scripts/chSoundLocation.sh
@@ -52,6 +52,18 @@ jobs:
          chmod +x ./.github/scripts/checkFilenameDuplicated.sh
          ./.github/scripts/checkFilenameDuplicated.sh
         shell: bash
+
+  Check_source_files:
+    name: Run check source files location bash script
+    runs-on: ubuntu-latest
+    steps:
+      -name: Checkout code
+       uses: actions/checkout@v2
+
+      -name: Check source files location
+       run:
+        chmod +x ./github/scripts/chSourceLocation.sh
+       shell: bash
 
       
 
