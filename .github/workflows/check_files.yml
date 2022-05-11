@@ -57,13 +57,13 @@ jobs:
     name: Run check source files location bash script
     runs-on: ubuntu-latest
     steps:
-      -name: Checkout code
-       uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-      -name: Check source files location
-       run:
-        chmod +x ./github/scripts/chSourceLocation.sh
-       shell: bash
+      - name: Check source files location
+        run:
+         chmod +x ./github/scripts/chSourceLocation.sh
+        shell: bash
 
       
 
