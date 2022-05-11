@@ -65,7 +65,7 @@ jobs:
          chmod +x ./.github/scripts/chSourceLocation.sh
         shell: bash
 
-  Check_source_files:
+  Check_image_size:
     name: Run check image suze files bash script
     runs-on: ubuntu-latest
     steps:
