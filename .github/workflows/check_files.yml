@@ -36,7 +36,7 @@ jobs:
 
       - name: Check data files location
         run: |
-         chmod +x ./.github/scripts/cDataLocation.sh
+         chmod +x ./.github/scripts/chDataLocation.sh
          ./.github/scripts/chDataLocation.sh
         shell: bash
 
