@@ -1,10 +1,14 @@
-find . -type f -name *.wav -or -name *.mp3 -or -name *.ogg | while read file
+myvar=0
+while read file
 do
-	if [[$file!=./Assets/Audio/*]]
+	if [[ $file != ./Assets/Audio/* ]]
 	then
 		echo "ChSoundLocation: wrong sound file location - $file"
-		exit 1
+		myvar=1
 	fi
-done
-echo "ChSoundLocation: success"
-exit 0
+done <<< "$(find . -type f -name *.mp3 -or -name *.wav -or -name *.ogg)"
+if [ $myvar == 0 ]
+then
+	echo "ChSoundLocation: success"
+fi
+exit $myvar

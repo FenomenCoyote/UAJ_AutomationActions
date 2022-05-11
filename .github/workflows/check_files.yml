@@ -10,8 +10,8 @@ jobs:
         
       - name: Check images location
         run: |
-         chmod +x ./.github/scripts/checkImagesLocation.sh
-         ./.github/scripts/checkImagesLocation.sh
+         chmod +x ./.github/scripts/chImageLocation.sh
+         ./.github/scripts/chImageLocation.sh
         shell: bash
 
   Check_sound_files:
@@ -23,8 +23,8 @@ jobs:
 
       - name: Check sounds location
         run: |
-         chmod +x ./.github/scripts/checkSoundsLocation.sh
-         ./.github/scripts/checkSoundsLocation.sh
+         chmod +x ./.github/scripts/chSoundLocation.sh
+         ./.github/scripts/chSoundLocation.sh
         shell: bash
 
   Check_data_files:
@@ -36,8 +36,8 @@ jobs:
 
       - name: Check data files location
         run: |
-         chmod +x ./.github/scripts/checkDataLocation.sh
-         ./.github/scripts/checkDataLocation.sh
+         chmod +x ./.github/scripts/cDataLocation.sh
+         ./.github/scripts/chDataLocation.sh
         shell: bash
 
   Check_repeated_filenames:
