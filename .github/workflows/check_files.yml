@@ -1,7 +1,7 @@
 name: Check Files
 on: push
 jobs:
-  File Checks:
+  File_Checks:
     name: Run check files bash scripts
     runs-on: ubuntu-latest
     steps:
