@@ -21,6 +21,7 @@ public class BotonSalir : MonoBehaviour {
     /// <param name="nombre"></param>
     public void CambiarAEscenaMenu(string nombre)
     {
+        Debug.Log("Cambiada escena: " + nombre);
         Time.timeScale = 1;
         SceneManager.LoadScene(nombre);
     }

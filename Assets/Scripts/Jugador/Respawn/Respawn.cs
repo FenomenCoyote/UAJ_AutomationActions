@@ -13,6 +13,7 @@ public class Respawn : MonoBehaviour {
     public void RespawnJugador(Transform other)
     {
         Vector3 posicion = new Vector3(spawn.position.x, spawn.position.y + other.transform.localScale.y*2, 0);
+        Debug.Log("Cambiamos posicion del jugador a " + posicion);
         other.position = posicion;   
     }
 
@@ -23,6 +24,12 @@ public class Respawn : MonoBehaviour {
     /// <param name="jugador"></param>
     public void CambiaSpawn(Transform posicionNueva)
     {
+        Debug.Log("Cambiamos posicion del spawn a " + posicionNueva);
         spawn = posicionNueva;
+    }
+
+    public Vector3 GetSpawnPosition()
+    {
+        return this.spawn.position;
     }
 }
