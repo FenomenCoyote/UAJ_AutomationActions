@@ -10,6 +10,12 @@ jobs:
 
       - name: Check images location
         run: |
-         chmod +x ./.github/scripts/checkImgInImages.sh
-         ./.github/scripts/checkImgInImages.sh
+         chmod +x ./.github/scripts/checkImagesLocation.sh
+         ./.github/scripts/checkImagesLocation.sh
         shell: bash
+
+     - name: Check sounds location
+       run: |
+        chmod +x ./.github/scripts/checkSoundsLocations.sh
+        ./.github/scripts/checkSoundsLocation.sh
+       shell: bash
