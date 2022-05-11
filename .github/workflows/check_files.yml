@@ -14,8 +14,8 @@ jobs:
          ./.github/scripts/checkImagesLocation.sh
         shell: bash
 
-     - name: Check sounds location
-       run: |
-        chmod +x ./.github/scripts/checkSoundsLocations.sh
-        ./.github/scripts/checkSoundsLocation.sh
-       shell: bash
+      - name: Check sounds location
+        run: |
+         chmod +x ./.github/scripts/checkSoundsLocations.sh
+         ./.github/scripts/checkSoundsLocation.sh
+        shell: bash
