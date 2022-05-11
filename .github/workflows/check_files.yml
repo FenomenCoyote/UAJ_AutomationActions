@@ -9,7 +9,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Check images location
-      run: |
-        chmod +x ./.github/scripts/checkImgInImages.sh
-        ./.github/scripts/checkImgInImages.sh
-      shell: bash
+        run: |
+         chmod +x ./.github/scripts/checkImgInImages.sh
+         ./.github/scripts/checkImgInImages.sh
+        shell: bash
