@@ -1,8 +1,8 @@
 mistake=0
-
-find . -type f -name *.json -or -name *.txt -or -name *.xaml -or -name *.xml -or -name *.csv | while read file
+cd Assets
+find . -type f -name *.json -or -name *.txt -or -name *.xaml -or -name *.csv | while read file
 do
-	if [[ $file != ./Assets/Data/* ]] 
+	if [[ $file != ./Data/* ]] 
 	then 
 		mistake=1
 		echo "file: $file is not in Data folder"	
