@@ -8,30 +8,26 @@ using UnityEngine.TestTools;
 
 namespace Tests
 {
+    /// <summary>
+    /// Este test verifica que en la escena de Juego el menu de pausa se abra y que este activo
+    /// </summary>
     public class PauseMenuTest
     {
-        // A Test behaves as an ordinary method
-        [Test]
-        public void PauseMenuTestSimplePasses()
-        {
-            // Use the Assert class to test conditions
-        }
-
         [SetUp]
         public void SetUp()
         {
+            //Empezamos en la escena del menu
             EditorSceneManager.LoadSceneInPlayMode("Assets/Scenes/Menu.unity", new LoadSceneParameters(LoadSceneMode.Single));
         }
 
-        // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-        // `yield return null;` to skip a frame.
         [UnityTest]
         public IEnumerator PauseMenuTestWithEnumeratorPasses()
         {
-           
+            //Cargamos la escena de juego, empezando en el mapa 1 por defecto
             EditorSceneManager.LoadSceneInPlayMode("Assets/Scenes/Juego.unity", new LoadSceneParameters(LoadSceneMode.Single));
             yield return null;
 
+            //Abrimos el menu de pausa
             GameObject canvas = GameObject.Find("CanvasUI");
             Debug.Log("Encontrado Canvas");
             UIManager ui = canvas.GetComponent<UIManager>();
@@ -39,11 +35,11 @@ namespace Tests
             ui.AbreMenuIngame(Player.jugador1);
             Debug.Log("Encontrado ui manager");
 
+            //Comprobamos que el menu de configuracion esta activo
             GameObject config = GameObject.Find("MenuConfiguracion");
             Assert.IsNotNull(config);
             Debug.Log("Encontrado menu config");
-            // Use the Assert class to test conditions.
-            // Use yield to skip a frame.
+
             yield return null;
         }
     }

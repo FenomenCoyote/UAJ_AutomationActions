@@ -22,7 +22,7 @@ namespace Tests
             //Empezamos en la escena del menu
             EditorSceneManager.LoadSceneInPlayMode("Assets/Scenes/Menu.unity", new LoadSceneParameters(LoadSceneMode.Single));
 
-            //Posiciones en las que va a aparecer el jugador para que choque con la dead zone
+            //Posiciones en las que va a aparecer el jugador 1 para que choque con la dead zone
             positions = new []{new Vector3(-442.55f, -24.43f, 0f), 
                                new Vector3(-433.9f, -24.9f, -0f),
                                new Vector3(-388f, -13f, 0f),

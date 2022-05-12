@@ -12,7 +12,7 @@ namespace Tests
 {
     /// <summary>
     /// Este test se encarga verificar de que al darle al boton de ajustes se active el menu de configuracion
-    /// y de que seguimos en la escena de menu
+    /// y de que seguimos en la escena de Menu
     /// </summary>
     public class ControlPanelTest
     {       

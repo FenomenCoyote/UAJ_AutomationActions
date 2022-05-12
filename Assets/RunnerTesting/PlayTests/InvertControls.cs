@@ -8,6 +8,10 @@ using UnityEngine.TestTools;
 
 namespace Tests
 {
+    /// <summary>
+    /// Este test verifica que cuando el jugador 1 lanza la habilidad invertir controles, la velocidad del jugador 2 es negativa
+    /// y sus teclas de saltar y rodar estan cambiadas
+    /// </summary>
     public class InvertCotrols
     {
         [SetUp]
@@ -24,24 +28,24 @@ namespace Tests
             EditorSceneManager.LoadSceneInPlayMode("Assets/Scenes/Juego.unity", new LoadSceneParameters(LoadSceneMode.Single));
 
             //Cogemos el jugador 1
-            GameObject jugador1 = null;
-            while (jugador1 == null)
+            GameObject player1 = null;
+            while (player1 == null)
             {
                 yield return new WaitForSeconds(1.0f);
-                jugador1 = GameObject.Find("Jugador1 ");
+                player1 = GameObject.Find("Jugador1 ");
             }
             yield return new WaitForSeconds(5.0f);
 
             //Cogemos el controlador del jugador 2
-            GameObject jugador2 = GameObject.Find("Jugador2");
-            ControladorJugador contJug2 = jugador2.GetComponent<ControladorJugador>();
+            GameObject player2 = GameObject.Find("Jugador2");
+            ControladorJugador contJug2 = player2.GetComponent<ControladorJugador>();
 
             //Guardamos las teclas de saltar y rodar antes de aplicar la habilidad
             KeyCode teclaSaltar = contJug2.getTeclaSaltar();
             KeyCode teclaRodar = contJug2.getTeclaRodar();
 
             //Aplicamos la habilidad de invertir controles al jugador 2
-            jugador1.GetComponent<PoderesManager>().ActivaInvierteControles();
+            player1.GetComponent<PoderesManager>().ActivaInvierteControles();
 
             yield return null;
 
