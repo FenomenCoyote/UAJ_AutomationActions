@@ -10,42 +10,38 @@ using UnityEngine.UI;
 
 namespace Tests
 {
+    /// <summary>
+    /// Este test se encarga de verificar que desde la escena Menu vamos a la escena Juego al darle al
+    /// boton de jugar
+    /// </summary>
     public class GoToGameFromMenu
-    {
-        // A Test behaves as an ordinary method
-        [Test]
-        public void MenuTestsSimplePasses()
-        {
-            // Use the Assert class to test conditions
-        }
-
+    {       
         [SetUp]
         public void SetUp()
         {
+            //Para hacer el test necesitamos empezar en la escena del Menu
             EditorSceneManager.LoadSceneInPlayMode("Assets/Scenes/Menu.unity", new LoadSceneParameters(LoadSceneMode.Single));
         }
 
-
-        // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-        // `yield return null;` to skip a frame.
         [UnityTest]
         public IEnumerator GoToGameScene()
-        {
+        {            
             string currentScene1 = SceneManager.GetActiveScene().name;
             Debug.Log("Escena antes de dar al boton: "+currentScene1);
+
+            //Cogemos el boton del jugar de la escena Menu
             GameObject playButton = GameObject.Find("ButtonJugar");
             Assert.IsNotNull(playButton, "Missing button " + playButton.name);
 
+            //Ejecutamos el evento que tenga asignado
             EventSystem.current.SetSelectedGameObject(playButton);
-
             playButton.GetComponent<Button>().onClick.Invoke();
-          
-            // Use the Assert class to test conditions.
-            // Use yield to skip a frame.           
+                    
             yield return null;
-                  
+            
+            //Comprobamos que la escena a la que vamos es la de Juego
             string currentScene = SceneManager.GetActiveScene().name;
-            Debug.Log("Escene despues de dar al boton:"+currentScene);
+            Debug.Log("Escena despues de dar al boton: "+currentScene);
             Assert.AreEqual("Juego", currentScene);
         }
     }

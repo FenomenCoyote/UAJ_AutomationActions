@@ -8,33 +8,34 @@ using UnityEngine.TestTools;
 
 namespace Tests
 {
+    /// <summary>
+    /// Este test verifica que cuando el jugador 1 choca con la dead zone (se cae al vacio) vuelve a la 
+    /// posicion de spawn
+    /// </summary>
     public class DeathTest
     {
         private Vector3[] positions;
-        // A Test behaves as an ordinary method
-        [Test]
-        public void DeathTestSimplePasses()
-        {
-            // Use the Assert class to test conditions
-        }
 
         [SetUp]
         public void SetUp()
         {
+            //Empezamos en la escena del menu
             EditorSceneManager.LoadSceneInPlayMode("Assets/Scenes/Menu.unity", new LoadSceneParameters(LoadSceneMode.Single));
+
+            //Posiciones en las que va a aparecer el jugador para que choque con la dead zone
             positions = new []{new Vector3(-442.55f, -24.43f, 0f), 
                                new Vector3(-433.9f, -24.9f, -0f),
                                new Vector3(-388f, -13f, 0f),
                                new Vector3(-229f, -6.8f, -0f)};
         }
 
-        // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-        // `yield return null;` to skip a frame.
         [UnityTest]
         public IEnumerator DeathTestWithEnumeratorPasses()
         {
+            //Cargamos la escena de juego, empezando en el mapa 1 por defecto
             EditorSceneManager.LoadSceneInPlayMode("Assets/Scenes/Juego.unity", new LoadSceneParameters(LoadSceneMode.Single));
-            //Esperamos a la carga del mapa
+
+            //Cogemos el jugador 1
             GameObject player = null;
             while(player == null)
             {
@@ -43,8 +44,10 @@ namespace Tests
             }
             yield return new WaitForSeconds(5.0f);
 
+            //Obtenemos el componente de que nos permite saber la posicion de respawn del jugador
             Respawn respawn = player.GetComponent<Respawn>();
             Assert.IsNotNull(respawn);
+
             foreach (Vector3 pos in positions)
             {
                 player.transform.position = pos;
@@ -54,8 +57,7 @@ namespace Tests
                 bool assert = Vector3.Distance(respawn.GetSpawnPosition(), player.transform.position) < 3.0f;
                 Assert.IsTrue(assert);
             }
-            // Use the Assert class to test conditions.
-            // Use yield to skip a frame.
+
             yield return null;
         }
     }

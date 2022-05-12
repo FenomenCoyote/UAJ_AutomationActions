@@ -8,29 +8,27 @@ using UnityEngine.TestTools;
 
 namespace Tests
 {
+    /// <summary>
+    /// Este test verifica que cuando el jugador 1 lanza la habilidad del cubo de hielo, el estado del jugador 2 
+    /// este con el del cubo de hielo 
+    /// </summary>
     public class CubitoTest
     {
         [SetUp]
         public void SetUp()
         {
+            //Empezamos en la escena del menu
             EditorSceneManager.LoadSceneInPlayMode("Assets/Scenes/Menu.unity", new LoadSceneParameters(LoadSceneMode.Single));
         }
 
-        // A Test behaves as an ordinary method
-        [Test]
-        public void CubitoTestSimplePasses()
-        {
-            // Use the Assert class to test conditions
-        }
-
-        // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-        // `yield return null;` to skip a frame.
         [UnityTest]
         public IEnumerator CubitoTestWithEnumeratorPasses()
         {
+            //Cargamos la escena de juego, empezando en el mapa 1 por defecto
             EditorSceneManager.LoadSceneInPlayMode("Assets/Scenes/Juego.unity", new LoadSceneParameters(LoadSceneMode.Single));
 
-            GameObject jugador1 = GameObject.Find("Jugador1 ");
+            //Cogemos el jugador 1
+            GameObject jugador1 = null;
             while (jugador1 == null)
             {
                 yield return new WaitForSeconds(1.0f);
@@ -38,11 +36,13 @@ namespace Tests
             }
             yield return new WaitForSeconds(5.0f);
 
+            //Aplicamos la habilidad del cubo de hielo al jugador 2
             GameObject jugador2 = GameObject.Find("Jugador2");
             jugador1.GetComponent<PoderesManager>().AplicarCuboDeHielo();
 
             yield return null;
 
+            //Comprobamos que el estado del juagdor 2 sea el del cubo de hielo
             Assert.IsTrue(jugador2.GetComponent<PerdidasControl>().GetEstadoActual() == PerdidaControles.enCubo);
         }
     }

@@ -306,6 +306,12 @@ public class GameManager : MonoBehaviour
         else puntoInicialJ2 = tr;
     }
 
+    public void SetPuntoInicial(Vector3 tr, Mundos mundo)
+    {
+        if (mundo == Mundos.mundoJ1) puntoInicialJ1.position = tr;
+        else puntoInicialJ2.position = tr;
+    }
+
     /// <summary>
     /// Método para tomar control en GameManager de cada mundo y su jugador.
     /// </summary>
