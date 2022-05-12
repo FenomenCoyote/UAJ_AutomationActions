@@ -152,6 +152,21 @@ public class ControladorJugador : MonoBehaviour
         teclaSaltar = nuevaTecla;
     }
 
+    public KeyCode getTeclaRodar()
+    {
+        return teclaRodar;
+    }
+
+    public KeyCode getTeclaSaltar()
+    {
+        return teclaSaltar;
+    }
+
+    public float getVelocidadX()
+    {
+        return velocidadX;
+    }
+
     /// <summary>
     /// Setter para gestionar el estado funcional del controlador.
     /// </summary>
