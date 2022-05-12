@@ -63,10 +63,11 @@ jobs:
       - name: Check source files location
         run:
          chmod +x ./.github/scripts/chSourceLocation.sh
+         ./.github/scripts/chSourceLocation.sh
         shell: bash
 
   Check_image_size:
-    name: Run check image suze files bash script
+    name: Run check image size files bash script
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -75,6 +76,20 @@ jobs:
       - name: Check image files size
         run:
          chmod +x ./.github/scripts/chImageSize.sh
+         ./.github/scripts/chImageSize.sh
+        shell: bash
+
+  Check_filenames_length:
+    name: Run check filenames length bash script
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Check filenames length
+        run:
+         chmod +x ./.github/scripts/chFilenameLength.sh
+         ./.github/scripts/chFilenameLength.sh
         shell: bash
 
       
