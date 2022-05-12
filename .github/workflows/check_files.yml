@@ -49,8 +49,8 @@ jobs:
 
       - name: Check repeated file names
         run: |
-         chmod +x ./.github/scripts/checkFilenameDuplicated.sh
-         ./.github/scripts/checkFilenameDuplicated.sh
+         chmod +x ./.github/scripts/chFilenameDuplicated.sh
+         ./.github/scripts/chFilenameDuplicated.sh
         shell: bash
 
   Check_source_files:
