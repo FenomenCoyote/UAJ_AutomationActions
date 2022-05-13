@@ -35,11 +35,11 @@ namespace Tests
             EditorSceneManager.LoadSceneInPlayMode("Assets/Scenes/Juego.unity", new LoadSceneParameters(LoadSceneMode.Single));
             yield return new WaitForSeconds(5.0f);
 
-            //Cargamos el mapa 3 que es el que contiene las ratas y colocamos a los jugadores
+            //Cargamos el mapa 3 que es el que contiene las ratas y colocamos al jugador 1
             //en el punto de spawn inicial del mapa 3
             GameManager.instance.SetIndiceMapa(3);
             GameManager.instance.CargaMapaEnMundos();
-            GameManager.instance.SetPuntoInicial(new Vector3(-14.55f, 0.41f), Mundos.mundoJ1);
+            GameManager.instance.SetPuntoInicial(new Vector3(-14.55f, 0.41f), Mundos.mundoJ1);           
             GameManager.instance.ColocaJugadores();
             yield return new WaitForSeconds(5.0f);
 

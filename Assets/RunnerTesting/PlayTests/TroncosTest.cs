@@ -34,7 +34,7 @@ namespace Tests
             EditorSceneManager.LoadSceneInPlayMode("Assets/Scenes/Juego.unity", new LoadSceneParameters(LoadSceneMode.Single));
             yield return new WaitForSeconds(5.0f);
 
-            //Cargamos el mapa 3 que es el que contiene los troncos y colocamos a los jugadores
+            //Cargamos el mapa 3 que es el que contiene los troncos y colocamos al jugador 1
             //en el punto de spawn inicial del mapa 3
             GameManager.instance.SetIndiceMapa(3);
             GameManager.instance.CargaMapaEnMundos();

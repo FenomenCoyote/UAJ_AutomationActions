@@ -9,10 +9,10 @@ using UnityEngine.TestTools;
 namespace Tests
 {
     /// <summary>
-    /// Este test verifica que cuando el jugador 1 lanza la habilidad invertir controles, la velocidad del jugador 2 es negativa
-    /// y sus teclas de saltar y rodar estan cambiadas
+    ///  Este test verifica que cuando el jugador 1 lanza la habilidad de la niebla, ralentiza al jugador 2, es decir, 
+    ///  su velocidad es menor
     /// </summary>
-    public class InvertCotrols
+    public class FogTest
     {
         [SetUp]
         public void SetUp()
@@ -20,9 +20,9 @@ namespace Tests
             //Empezamos en la escena del menu
             EditorSceneManager.LoadSceneInPlayMode("Assets/Scenes/Menu.unity", new LoadSceneParameters(LoadSceneMode.Single));
         }
-      
+
         [UnityTest]
-        public IEnumerator InvertControlsWithEnumeratorPasses()
+        public IEnumerator FogTestWithEnumeratorPasses()
         {
             //Cargamos la escena de juego, empezando en el mapa 1 por defecto
             EditorSceneManager.LoadSceneInPlayMode("Assets/Scenes/Juego.unity", new LoadSceneParameters(LoadSceneMode.Single));
@@ -40,25 +40,26 @@ namespace Tests
             GameObject player2 = GameObject.Find("Jugador2");
             ControladorJugador contJug2 = player2.GetComponent<ControladorJugador>();
 
-            //Guardamos las teclas de saltar y rodar antes de aplicar la habilidad
-            KeyCode jumpKey = contJug2.getTeclaSaltar();
-            KeyCode rollKey = contJug2.getTeclaRodar();
+            //Velociad del jugador 2 antes de aplicarle la niebla
+            float speed = contJug2.getVelocidadX();
+            Debug.Log("Velcidad antes de aplicar Niebla: " + speed);
 
-            //Aplicamos la habilidad de invertir controles al jugador 2
-            player1.GetComponent<PoderesManager>().ActivaInvierteControles();
+            //Aplicamos la habilidad de la niebla controles al jugador 2
+            player1.GetComponent<PoderesManager>().ActivaNeblina();
 
             yield return null;
 
-            //Guardamos las tecla de saltar y rodar cambiadas
-            KeyCode changedJumpKey = contJug2.getTeclaSaltar();
-            KeyCode changedRollKey = contJug2.getTeclaRodar();
+            //Velocidad del jugador 2 tras aplicarle la niebla
+            float speedWithFog = contJug2.getVelocidadX();
+            Debug.Log("Velocidad despues de aplicar Niebla: " + speedWithFog);
 
-            //Comprobamos que la velocidad del jugador 2 esta invertida (es negativa)
-            Assert.Negative(contJug2.getVelocidadX());
-            //Comprobamos que la tecla de saltar es la de rodar
-            Assert.AreEqual(changedRollKey, jumpKey);
-            //Comprobamos que la tecla de rodar es la de saltar
-            Assert.AreEqual(changedJumpKey, rollKey);
+            //Comprobamos queel prefab de la niebla existe
+            GameObject fog = GameObject.Find("Neblina(Clone)");
+            Assert.IsNotNull(fog);
+
+            //Se comprueba que la velocidad del jugador 2 tras aplicarle la niebla es menor
+            //que la que tenia antes
+            Assert.IsTrue(speedWithFog < speed);
         }
     }
 }

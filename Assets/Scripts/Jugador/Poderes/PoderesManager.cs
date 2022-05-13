@@ -203,7 +203,7 @@ public class PoderesManager : MonoBehaviour {
     /// <summary>
     /// Método para activar el muro, checkea la posición del jugador contrario e instancia la neblina en la siguiente posición permitida cuando el poder sea activado   
     /// </summary>
-    void ActivaNeblina()
+    public void ActivaNeblina()
     {
         int bandera = 0;    //Bandera para recorrer el array de coordenadas de poderes en mapa
         float ancho;

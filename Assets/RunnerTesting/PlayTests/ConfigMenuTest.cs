@@ -11,10 +11,10 @@ using UnityEngine.UI;
 namespace Tests
 {
     /// <summary>
-    /// Este test se encarga verificar de que al darle al boton de ajustes se active el menu de configuracion
-    /// y de que seguimos en la escena de Menu
+    /// Este test se encarga verificar en la escena del Menu, que al darle al boton de ajustes se active el menu de configuracion
+    /// y de que seguimos en la escena del Menu
     /// </summary>
-    public class ControlPanelTest
+    public class ConfigMenuTest
     {       
         [SetUp]
         public void SetUp()
@@ -24,7 +24,7 @@ namespace Tests
         }
 
         [UnityTest]
-        public IEnumerator ControlPanelTestWithEnumeratorPasses()
+        public IEnumerator ConfigMenuTestWithEnumeratorPasses()
         {
             //Ejecutamos el evento del boton de configuracion
             GameObject configButton = GameObject.Find("ButtonConfig");         
@@ -39,7 +39,7 @@ namespace Tests
             Assert.AreEqual("Menu", currentScene);
             Debug.Log("Seguimos en la escena Menu");
 
-            //Verifcamos que el menu de configuracion esta activo
+            //Verificamos que el menu de configuracion esta activo
             GameObject controlPanel = GameObject.Find("PanelConfig");
             Assert.IsNotNull(controlPanel);
             Debug.Log("El panel de controles esta activo");
