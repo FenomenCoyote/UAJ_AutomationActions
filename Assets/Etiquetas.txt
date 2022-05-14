@@ -1,2 +1,0 @@
-Player1: jugador1
-Player2: jugador2
