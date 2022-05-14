@@ -11,7 +11,7 @@ namespace Tests
     /// <summary>
     /// Este test verifica que cuando el jugador 1 choca con troncos vuelve a la posicion de spawn
     /// </summary>
-    public class TroncosTest
+    public class LogsTest
     {
         private Vector3[] positions; 
 
@@ -28,9 +28,9 @@ namespace Tests
         }
 
         [UnityTest]
-        public IEnumerator TroncosTestWithEnumeratorPasses()
+        public IEnumerator LogsTestWithEnumeratorPasses()
         {
-            //Cragamos la escena del Juego y esperamos unos segundos
+            //Cragamos la escena del Juego y esperamos unos segundos, empezando en el mapa 1 por defecto
             EditorSceneManager.LoadSceneInPlayMode("Assets/Scenes/Juego.unity", new LoadSceneParameters(LoadSceneMode.Single));
             yield return new WaitForSeconds(5.0f);
 

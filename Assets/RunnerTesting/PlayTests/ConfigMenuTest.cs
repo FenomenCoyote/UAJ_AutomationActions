@@ -31,7 +31,7 @@ namespace Tests
             EventSystem.current.SetSelectedGameObject(configButton);
             configButton.GetComponent<Button>().onClick.Invoke();
 
-            //Esperamos por 1 seg para que termine el fade de la animacion
+            //Esperamos por 1 segundo para que termine el fade de la animacion
             yield return new WaitForSeconds(1.0f);
 
             //Verificamos que seguimos en la escena del Menu

@@ -13,7 +13,7 @@ namespace Tests
     /// <summary>
     /// Este test verifica que desde la escena Juego vamos a la escena Menu, usando el menu de pausa
     /// </summary>
-    public class GoToMenuFromGame
+    public class GoToMenuFromGameTest
     {
         [SetUp]
         public void SetUp()
@@ -23,9 +23,9 @@ namespace Tests
         }
 
         [UnityTest]
-        public IEnumerator GoToMenuScene()
-        {  
-            //Cargamos la escena Juego y esperamos un frame
+        public IEnumerator GoToMenuFromGameTestWithEnumeratorPasses()
+        {
+            //Cargamos la escena Juego, empezando en el mapa 1 por defecto y esperamos un frame
             EditorSceneManager.LoadSceneInPlayMode("Assets/Scenes/Juego.unity", new LoadSceneParameters(LoadSceneMode.Single));
             yield return null;
 

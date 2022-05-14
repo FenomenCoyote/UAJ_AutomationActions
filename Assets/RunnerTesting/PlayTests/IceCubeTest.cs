@@ -12,7 +12,7 @@ namespace Tests
     /// Este test verifica que cuando el jugador 1 lanza la habilidad del cubo de hielo, el estado del jugador 2 
     /// este con el del cubo de hielo 
     /// </summary>
-    public class CubitoTest
+    public class IceCubeTest
     {
         [SetUp]
         public void SetUp()
@@ -22,7 +22,7 @@ namespace Tests
         }
 
         [UnityTest]
-        public IEnumerator CubitoTestWithEnumeratorPasses()
+        public IEnumerator IceCubeTestWithEnumeratorPasses()
         {
             //Cargamos la escena de juego, empezando en el mapa 1 por defecto
             EditorSceneManager.LoadSceneInPlayMode("Assets/Scenes/Juego.unity", new LoadSceneParameters(LoadSceneMode.Single));
@@ -42,7 +42,7 @@ namespace Tests
 
             yield return null;
 
-            //Comprobamos que el estado del juagdor 2 sea el del cubo de hielo
+            //Comprobamos que el estado del jugador 2 sea el del cubo de hielo
             Assert.IsTrue(player2.GetComponent<PerdidasControl>().GetEstadoActual() == PerdidaControles.enCubo);
         }
     }

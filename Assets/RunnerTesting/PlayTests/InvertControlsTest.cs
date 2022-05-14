@@ -9,10 +9,10 @@ using UnityEngine.TestTools;
 namespace Tests
 {
     /// <summary>
-    /// Este test verifica que cuando el jugador 1 lanza la habilidad invertir controles, la velocidad del jugador 2 es negativa
+    /// Este test verifica que cuando el jugador 1 lanza la habilidad de invertir controles, la velocidad del jugador 2 es negativa
     /// y sus teclas de saltar y rodar estan cambiadas
     /// </summary>
-    public class InvertCotrols
+    public class InvertControlsTest
     {
         [SetUp]
         public void SetUp()
@@ -22,7 +22,7 @@ namespace Tests
         }
       
         [UnityTest]
-        public IEnumerator InvertControlsWithEnumeratorPasses()
+        public IEnumerator InvertControlsTestWithEnumeratorPasses()
         {
             //Cargamos la escena de juego, empezando en el mapa 1 por defecto
             EditorSceneManager.LoadSceneInPlayMode("Assets/Scenes/Juego.unity", new LoadSceneParameters(LoadSceneMode.Single));

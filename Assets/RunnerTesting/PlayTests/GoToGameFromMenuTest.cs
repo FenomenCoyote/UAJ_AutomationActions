@@ -14,7 +14,7 @@ namespace Tests
     /// Este test se encarga de verificar que desde la escena Menu vamos a la escena Juego al darle al
     /// boton de jugar
     /// </summary>
-    public class GoToGameFromMenu
+    public class GoToGameFromMenuTest
     {       
         [SetUp]
         public void SetUp()
@@ -24,7 +24,7 @@ namespace Tests
         }
 
         [UnityTest]
-        public IEnumerator GoToGameScene()
+        public IEnumerator GoToGameFromMenuTestWithEnumeratorPasses()
         {            
             string currentScene1 = SceneManager.GetActiveScene().name;
             Debug.Log("Escena antes de dar al boton: "+currentScene1);

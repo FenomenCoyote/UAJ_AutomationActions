@@ -31,7 +31,7 @@ namespace Tests
         [UnityTest]
         public IEnumerator RatsTestWithEnumeratorPasses()
         {
-            //Cragamos la escena del Juego y esperamos unos segundos
+            //Cragamos la escena del Juego y esperamos unos segundos, empezando en el mapa 1 por defecto
             EditorSceneManager.LoadSceneInPlayMode("Assets/Scenes/Juego.unity", new LoadSceneParameters(LoadSceneMode.Single));
             yield return new WaitForSeconds(5.0f);
 

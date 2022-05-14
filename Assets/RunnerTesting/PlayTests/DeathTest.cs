@@ -53,7 +53,7 @@ namespace Tests
                 player.transform.position = pos;
                 //Esperamos 2 segundos a que el jugador caiga
                 yield return new WaitForSeconds(6.0f);
-                //Comprobaoms si ha vuelto a la posición de spawn               
+                //Comprobamos si ha vuelto a la posición de spawn               
                 bool assert = Vector3.Distance(respawn.GetSpawnPosition(), player.transform.position) < 3.0f;
                 Assert.IsTrue(assert);
             }
